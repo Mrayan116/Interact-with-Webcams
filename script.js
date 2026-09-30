@@ -73,3 +73,27 @@ if (trailCanvas) {
                 Math.PI * 2
             );
 
+           trailContext.fillStyle =
+                `rgba(255,255,255,${point.life * 0.5})`;
+
+
+            trailContext.fill();
+
+        }
+
+
+        points = points.filter(function(point) {
+            return point.life > 0;
+        });
+
+
+        requestAnimationFrame(drawTrail);
+
+    }
+
+
+    drawTrail();
+
+}
+
+
