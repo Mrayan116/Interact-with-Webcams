@@ -95,5 +95,23 @@ if (trailCanvas) {
     drawTrail();
 
 }
+/* =========================
+   WEBCAM DRAW
+   ========================= */
 
+const video = document.getElementById("video");
+
+if (video) {
+
+    const drawCanvas = document.getElementById("draw");
+    const drawContext = drawCanvas.getContext("2d");
+
+    const hudGesture = document.getElementById("hudGesture");
+    const hudColor = document.getElementById("hudColor");
+
+    const sizeSlider = document.getElementById("size");
+    const clearButton = document.getElementById("clearBtn");
+    const saveButton = document.getElementById("saveBtn");
+    const startCameraButton =
+        document.getElementById("startCameraBtn");
 
