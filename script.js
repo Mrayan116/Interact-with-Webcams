@@ -115,3 +115,32 @@ if (video) {
     const startCameraButton =
         document.getElementById("startCameraBtn");
 
+const pen = document.getElementById("pen");
+
+
+    let brushSize = Number(sizeSlider.value);
+
+    let currentColor = "#3b82ff";
+    let colorName = "Blue";
+
+
+    let previousX = null;
+    let previousY = null;
+
+
+    let smoothX = 0;
+    let smoothY = 0;
+
+
+    const SMOOTHING = 0.55;
+
+
+    let mediaPipeCamera = null;
+    let handsModel = null;
+
+    let cameraStarted = false;
+
+
+    /* =========================
+       Toolbar
+       ========================= */
